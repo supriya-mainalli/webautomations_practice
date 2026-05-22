@@ -1,9 +1,15 @@
-def test_hello_user():
-    print('hello, supriya')
-    msg = 'hello'
-    assert msg == 'hello'
+import pytest
 
-def test_second_pgm():
-    a = 2
-    b = 5
-    assert a+b == 10, 'Error'
+@pytest.mark.smoke
+def test_first_pgm():
+    print(f"this is first pgm")
+
+# @pytest.mark.xfail
+def test_credcard1():
+    print(f"pattern test runner1")
+
+# @pytest.mark.skip
+def test_credcard2():
+    print(f"pattern test runner2")
+
+
