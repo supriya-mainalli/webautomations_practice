@@ -5,7 +5,7 @@ def test_static_webtables(page: Page):
     
     # locating the tables  
     table = page.locator("table[name='BookTable'] tbody")
-    expect(table).to_be_visible
+    expect(table).to_be_visible()
     header = table.locator("tr th").all_inner_texts()
     print(f"the header is {header}")
 
@@ -35,7 +35,5 @@ def test_static_webtables(page: Page):
         price=int(data.locator("td").nth(3).inner_text())
         sum_ += price
         print(price)
-    
-    expect()
 
 
